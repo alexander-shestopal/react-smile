@@ -1,26 +1,36 @@
-import React from 'react';
-//import logo from './logo.svg';
-import './App.css';
-import Learn from './components/Hello';
-import Learning from './components/Learning';
-import Hook from './components/Hook';
-import Check from './components/Check';
+import React, { Component } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
+class App extends Component {
 
-        {/* <Learn name='Mango'  weight="20g"/>
-        <Learn name='Orange' weight="30g"/>
-        <Learn name='Apple'  weight="40g"/> */}
-        <Learning/>
-      {/* <Hook/> */}
-      {/* <Check/> */}
-      </header>
-    </div>
+  state = {
+    name:""
+  }
 
-  );
+  CangeData =  (e) => {
+    let val = e.target.value;
+    this.setState({name:val});
+
+  }
+
+  render() {
+    return(
+      <div className="App">
+        <h1 style={{marginLeft:200}}> Hello {this.state.name}</h1>
+        <div>
+          <form>
+            <div className="form-group" style={{marginLeft:200}}>
+              <label>User name:</label><br></br>
+              <input type="text" name="username" onChange={this.CangeData}></input><br></br>
+              <button type="submit">Submit</button>
+            </div>
+          </form>
+
+        </div>
+
+      </div>
+    )
+  }
+
 }
 
 export default App;
