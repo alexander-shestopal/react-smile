@@ -18,10 +18,9 @@ class App extends Component {
 
     return(
       <div className="App">
-        <h1>Student list</h1>
         <Navbar bg="light" expand="lg">
   <Container fluid>
-    <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+    <Navbar.Brand href="#">React-bootstrap</Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll">
       <Nav
@@ -29,19 +28,11 @@ class App extends Component {
         style={{ maxHeight: '100px' }}
         navbarScroll
       >
-        <Nav.Link href="#action1">Home</Nav.Link>
-        <Nav.Link href="#action2">Link</Nav.Link>
-        <NavDropdown title="Link" id="navbarScrollingDropdown">
-          <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-          <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
-          <NavDropdown.Divider />
-          <NavDropdown.Item href="#action5">
-            Something else here
-          </NavDropdown.Item>
-        </NavDropdown>
-        <Nav.Link href="#" disabled>
-          Link
-        </Nav.Link>
+        <Nav.Link href="#home">About As</Nav.Link>
+        <Nav.Link href="#contact">Contact As</Nav.Link>
+        <Nav.Link href="#bloge">Blog</Nav.Link>
+        <Nav.Link href="#profile">Profile</Nav.Link>
+
       </Nav>
       <Form className="d-flex">
         <FormControl
@@ -55,6 +46,8 @@ class App extends Component {
     </Navbar.Collapse>
   </Container>
 </Navbar>
+
+        <div>
         <Breadcrumb>
   <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
   <Breadcrumb.Item href="https://getbootstrap.com/docs/4.0/components/breadcrumb/">
@@ -62,14 +55,6 @@ class App extends Component {
   </Breadcrumb.Item>
   <Breadcrumb.Item active>Data</Breadcrumb.Item>
 </Breadcrumb>
-        <div>
-  <Button variant="primary">Primary</Button>{' '}
-  <Button variant="secondary">Secondary</Button>{' '}
-  <Button variant="success">Success</Button>{' '}
-  <Button variant="warning">Warning</Button>{' '}
-  <Button variant="danger">Danger</Button> <Button variant="info">Info</Button>{' '}
-  <Button variant="light">Light</Button> <Button variant="dark">Dark</Button>{' '}
-  <Button variant="link">Link</Button>
     
 
         </div>
