@@ -12,7 +12,6 @@ class App extends Component {
       <div className="App">
       <h1> This is our Home Component</h1>
 
-
       </div>
     )
   }

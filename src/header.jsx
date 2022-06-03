@@ -6,6 +6,7 @@ import About from './components/about';
 import Blog from "./components/blog";
 import Profile from "./components/profile";
 import Contact from "./components/contact";
+import Writepost from "./components/writepost";
 export default class header extends Component {
     render() {
         return (
@@ -13,17 +14,13 @@ export default class header extends Component {
             <div>
               <Navbar bg="light" expand="lg">
                 <Navbar.Brand>
-                  <Link to="/">
-                    React-bootstrap
-                  </Link>
+                  <Link to="/">React-bootstrap</Link>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                   <Nav className="me-auto">
                     <Nav.Link>
-                      <Link to="/about">
-                        About As
-                      </Link>
+                      <Link to="/about">About As</Link>
                     </Nav.Link>
                     <Nav.Link>
                       <Link to="/contact">Contact As</Link>
@@ -44,6 +41,7 @@ export default class header extends Component {
               <Route path="/contact" element={<Contact />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/profile" element={<Profile />} />
+              <Route path="/writepost" element={<Writepost />} />
             </Routes>
           </Router>
         );
