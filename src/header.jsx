@@ -1,47 +1,51 @@
 import React, { Component } from "react";
-import {
-  Button,
-  Breadcrumb,
-  Navbar,
-  Container,
-  Nav,
-  NavDropdown,
-  Form,
-  FormControl,
-} from "react-bootstrap";
-
+import { Navbar, Nav} from "react-bootstrap";
+import { BrowserRouter as Router,Routes,Route, Link } from "react-router-dom";
+import App from "./App";
+import About from './components/about';
+import Blog from "./components/blog";
+import Profile from "./components/profile";
+import Contact from "./components/contact";
 export default class header extends Component {
     render() {
         return (
-          <div>
-            <Navbar bg="light" expand="lg">
-              <Container fluid>
-                <Navbar.Brand href="#">React-bootstrap</Navbar.Brand>
-                <Navbar.Toggle aria-controls="navbarScroll" />
-                <Navbar.Collapse id="navbarScroll">
-                  <Nav
-                    className="me-auto my-2 my-lg-0"
-                    style={{ maxHeight: "100px" }}
-                    navbarScroll
-                  >
-                    <Nav.Link href="#home">About As</Nav.Link>
-                    <Nav.Link href="#contact">Contact As</Nav.Link>
-                    <Nav.Link href="#bloge">Blog</Nav.Link>
-                    <Nav.Link href="#profile">Profile</Nav.Link>
+          <Router>
+            <div>
+              <Navbar bg="light" expand="lg">
+                <Navbar.Brand>
+                  <Link to="/">
+                    React-bootstrap
+                  </Link>
+                </Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                  <Nav className="me-auto">
+                    <Nav.Link>
+                      <Link to="/about">
+                        About As
+                      </Link>
+                    </Nav.Link>
+                    <Nav.Link>
+                      <Link to="/contact">Contact As</Link>
+                    </Nav.Link>
+                    <Nav.Link>
+                      <Link to="/blog">Blog</Link>
+                    </Nav.Link>
+                    <Nav.Link>
+                      <Link to="/profile">Profile</Link>
+                    </Nav.Link>
                   </Nav>
-                  <Form className="d-flex">
-                    <FormControl
-                      type="search"
-                      placeholder="Search"
-                      className="me-2"
-                      aria-label="Search"
-                    />
-                    <Button variant="outline-success">Search</Button>
-                  </Form>
                 </Navbar.Collapse>
-              </Container>
-            </Navbar>
-          </div>
+              </Navbar>
+            </div>
+            <Routes>
+              <Route path="/" element={<App />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/profile" element={<Profile />} />
+            </Routes>
+          </Router>
         );
     }
 
