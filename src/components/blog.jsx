@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default class blog extends Component {
 
@@ -32,7 +32,7 @@ export default class blog extends Component {
       const allposts = posts.map((post,idx) => {
         return (
           <div>
-            <a href="" key={idx}>{post.title}</a><br></br>
+            <a href="#" key={idx}>{post.title}</a><br></br>
             <p>{post.body}</p>
           </div>
         )
