@@ -32,7 +32,7 @@ export default class blog extends Component {
       const allposts = posts.map((post,idx) => {
         return (
           <div>
-            <a href="#" key={idx}>{post.title}</a><br></br>
+            <a href="/" key={idx}>{post.title}</a><br></br>
             <p>{post.body}</p>
           </div>
         )
